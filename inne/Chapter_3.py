@@ -16,6 +16,5 @@ for element in range(372**2, 809**2+1):
 
         # checking criteria at least two groups of identical adjacent digits
         if count_repeat >= 2:
-            print(tmp)
             b += 1
-
+print(b)

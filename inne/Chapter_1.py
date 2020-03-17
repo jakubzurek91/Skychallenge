@@ -53,5 +53,3 @@ class Car:
     def total_mass(self):
         return self.__total_mass
 
-
-if __name__=="__main__":
