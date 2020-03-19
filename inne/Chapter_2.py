@@ -70,8 +70,19 @@ if __name__ == "__main__":
         with open("sample.json", "r") as outfile:
             data = json.load(outfile)
         if sys.argv[2] == "--all":
-            pprint.pprint(data, sort_dicts=False)
+            for key, value in data.items():
+                outputText = 'hash: ' + str(key) + "\n" +\
+                             ' name: ' + str(value["--name"]) + "\n" + \
+                             ' deadline: ' + str(value["--deadline"]) + "\n" +\
+                             ' description: ' + str(value["--description"]) + "\n"
+
+                print(outputText)
         elif sys.argv[2] == "--today":
-            for element in data:
-                if data[element]["--deadline"] == datetime.date.today().__str__():
-                    print(element, json.dumps(data[element], indent= 6, sort_keys= False))
+            for key, value in data.items():
+                if value["--deadline"] == datetime.date.today().__str__():
+                    outputText = 'hash: ' + str(key) + "\n" + \
+                                 ' name: ' + str(value["--name"]) + "\n" + \
+                                 ' deadline: ' + str(value["--deadline"]) + "\n" + \
+                                 ' description: ' + str(value["--description"]) + "\n"
+
+                    print(outputText)

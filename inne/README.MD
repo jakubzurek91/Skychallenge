@@ -1,4 +1,4 @@
-**Chapter 1**
+**py**
 
 To run the scripts, you must clone the repository or copy the code.
 To check the Car class from task 1, create an object as follows:
