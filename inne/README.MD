@@ -1,3 +1,5 @@
+Python v. 3.8.1
+
 **Chapter 1**
 
 To run the scripts, you must clone the repository or copy the code.
